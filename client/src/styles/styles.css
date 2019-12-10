@@ -1,0 +1,89 @@
+/* Palette:
+#f4f4f4
+#ff7315
+#3a3535
+#232020 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff7315;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+footer {
+    background-color: #3a3535;
+    color: #f4f4f4;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.login {
+    margin: 20px 20% 20px 20%;
+}
+
+.logo {
+    color: #f4f4f4;
+    margin-left: 64px;
+}
+
+.nav-text-color {
+    color: #f4f4f4; 
+}
+
+.nav-text-color :hover {
+    color: #3a3535;
+}
+
+.nav-space {
+    margin-top: 8px;
+}
+
+.nav-button-space {
+    margin-right: 8px;
+}
+
+.nav-text-decoration {
+    font-weight: bold;
+}
+
+.nav-text-decoration :hover{
+    color: #3a3535;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-signin-color {
+    color: #ff7315;
+}
+
+.nav-signup-color {
+    color: #f4f4f4;
+}
+
+.login-button {
+    background-color: #3a3535;
+    color: #f4f4f4;
+    margin-top: 8px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.login-button :hover {
+    background-color: #3a3535;
+    color: #ff7315;
+}
+
+.login-button-text {
+    color: #f4f4f4;
+}
