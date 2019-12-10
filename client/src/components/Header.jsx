@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import User from "./User";
 import SignInUpButton from "./SignInUpButton";
 
-const isUserLogged = true;
+// temporary
+const isUserLogged = false;
 
 function Header() {
     return (
