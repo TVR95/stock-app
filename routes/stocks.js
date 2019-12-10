@@ -3,9 +3,6 @@ const request = require("request");
 const Stock = require("../models/stockdata.model");
 
 router.route('/').get((req, res) => {
-    //  Stock.find()
-    // .then(stocks => res.json(stocks))
-    // .catch(err => res.status(400).json('Error ' + err));
     res.json('main');
 });
 
@@ -37,16 +34,6 @@ router.route('/populatedb').get((req, res) => {
     } else {
         res.json('Database is populated');
     }
-    // const newStock = new Stock({ 
-    //     name: 'dadada',
-    //     code: 'dadada',
-    //     stock: 2,
-    //     price: 3
-    // });
-
-    // newStock.save()
-    // .then(() => res.json('success'))
-    // .catch(err => res.json('error' + err));
 });
 
 router.route('/data').get((req, res) => {
