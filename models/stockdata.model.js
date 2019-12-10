@@ -5,10 +5,13 @@ const Schema = mongoose.Schema;
 const stockSchema = new Schema ({
     name: { 
         type: String, 
-        required: true },
+        required: true,
+        unique: true
+    },
     code: { 
         type: String,
-        required: true },
+        required: true,
+        unique: true },
     stock: { 
         type: Number, 
         required: true },

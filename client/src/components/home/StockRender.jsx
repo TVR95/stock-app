@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
+import TableStocks from "./TableStocks";
 
 function StockRender() {
 
@@ -49,20 +50,7 @@ function StockRender() {
             {data.isLoaded ? 
                 data.items.items.map((item) => {
                 return (
-                    <div className="row">
-                        <div className="col">
-                            <p>{item.name}</p>
-                        </div> 
-                        <div className="col">
-                            <p>{item.unit}</p>
-                        </div>
-                        <div className="col">
-                            <p>{item.price} zł</p>
-                        </div>
-                        <div className="col">
-                            <button className="btn btn-primary">Buy</button>
-                        </div>
-                    </div> 
+                    <TableStocks namee={item.name} unit={item.unit} price={item.price} code={item.code} buttonName="Buy" postAction="buy" />
                 );     
             }) : <p>No Data</p>}
         </div>

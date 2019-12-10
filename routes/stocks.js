@@ -46,6 +46,12 @@ router.route('/data').get((req, res) => {
     });
 });
 
+router.route('/datadb').get((req, res) => {
+    Stock.find((err, foundStocks) => {
+        err ? res.status(400).json(err) : res.status(200).json(foundStocks);
+    });
+});
+
 router.route('/add').post((req, res) => {
     const name = req.body.name;
     const code = req.body.code;
@@ -58,6 +64,14 @@ router.route('/add').post((req, res) => {
     newStock.save()
     .then(() => res.json('Stock added!'))
     .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/buy').post((req, res) => {
+
+});
+
+router.route('/sell').post((req, res) => {
+
 });
 
 module.exports = router;

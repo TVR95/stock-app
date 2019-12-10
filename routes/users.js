@@ -66,4 +66,8 @@ router.route('/registration').post(async (req, res) => {
     }
 });
 
+router.route('/password').post((req, res) => {
+    
+});
+
 module.exports = router;

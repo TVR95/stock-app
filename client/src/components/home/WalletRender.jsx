@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import TableStocks from "./TableStocks";
 
 function WalletRender() {
 
@@ -49,21 +50,8 @@ function WalletRender() {
             {data.isLoaded ? 
                 data.items.items.map((item) => {
                 return (
-                    <div className="row">
-                        <div className="col">
-                            <p>{item.name}</p>
-                        </div> 
-                        <div className="col">
-                            <p>{item.unit}</p>
-                        </div>
-                        <div className="col">
-                            <p>{item.price} zł</p>
-                        </div>
-                        <div className="col">
-                            <button className="btn btn-primary">Sell</button>
-                        </div>
-                    </div> 
-                );     
+                    <TableStocks namee={item.name} unit={item.unit} price={item.price} code={item.code} buttonName="Sell" postAction="sell" />
+                );      
             }) : <p>No Data</p>}
         </div>
     );
