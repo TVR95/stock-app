@@ -19,9 +19,6 @@ function Header() {
                             <li className="nav-item">
                                 <Link to="/" className="nav-link nav-text-color">Home</Link>
                             </li>
-                            <li>
-                                <Link to="/about" className="nav-link nav-text-color">About us</Link>
-                            </li>
                             <li className="nav-item">
                                 <Link to="/stocks" className="nav-link nav-text-color">Stocks</Link>
                             </li>
