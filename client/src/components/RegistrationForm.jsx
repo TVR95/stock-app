@@ -18,7 +18,7 @@ function RegistrationForm() {
             </div>
             <div className="form-row col">
                 <label for="wallet">Wallet</label>
-                <input className="form-control" type="number" name="walletFunds" placeholder="Wallet" value="0" />
+                <input className="form-control" type="number" name="walletFunds" placeholder="0"/>
             </div>
             <button type="submit" className="btn login-button nav-link login-button-text">Register</button>
         </form>

@@ -40,24 +40,38 @@ userSchema.methods.generateAuthToken = () => {
 // create User mongoose model
 const User = mongoose.model('User', userSchema);
 
-function validateUserLogin(user) {
+// function validateUserLogin(user) {
     
+//     return joi.object({
+//         email: joi.string().min(5).max(50).email().required(),
+//         password: joi.string().min(6).max(255).required()
+//     }).validate(user);
+// }
+
+// function validateUserRegistration(user) {
+
+//     return joi.object({
+//         email: joi.string().min(5).max(50).email().required(),
+//         password: joi.string().min(6).max(255).required(),
+//         repeatPassword: joi.string().min(6).max(255),
+//         wallet: joi.number().required()
+//     }).validate(user);
+// }
+
+module.exports = User;
+
+exports.validateUserLogin = (user) => {
     return joi.object({
         email: joi.string().min(5).max(50).email().required(),
         password: joi.string().min(6).max(255).required()
-    }).validate(user);;
-}
+    }).validate(user);
+};
 
-function validateUserRegistration(user) {
-
+exports.validateUserRegistration = (user) => {
     return joi.object({
         email: joi.string().min(5).max(50).email().required(),
         password: joi.string().min(6).max(255).required(),
         repeatPassword: joi.string().min(6).max(255),
         wallet: joi.number().required()
     }).validate(user);
-}
-
-module.exports = User;
-exports.validateUserLogin = validateUserLogin;
-exports.validateUserRegistration = validateUserRegistration;
+};
